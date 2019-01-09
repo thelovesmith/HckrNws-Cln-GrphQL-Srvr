@@ -1,0 +1,28 @@
+
+type Query {
+  
+  info: String!
+  #Query for calliing the whole Link array 
+  feed: [Link!]!
+}
+type Mutation {
+  #Mutation for posting single link 
+	post(url: String!, description: String!): Link!
+}
+## I believe this is pretty mush the schema for single links
+type Link {
+    id: ID!
+    description: String!
+    url: String!
+}
+
+type Query {
+  ##query for selecting a specific Link based on its ID
+  link(id: ID!): Link!
+}
+type Mutation {
+  ##Update Link Mutation
+  updateLink(id: ID!, url: String, description: String): Link
+  ##Delete link mutation
+  deleteLink(id: ID!): Link
+}
