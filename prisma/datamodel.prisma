@@ -5,3 +5,4 @@ type Link {
     url: String!
 }
 
+pri
