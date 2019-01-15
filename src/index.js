@@ -1,11 +1,11 @@
 const { GraphQLServer } = require('graphql-yoga')
-const { prisma } = require('./generated/prisma-client')
+const { prisma } = require('./generated/prisma-client/index')
 
 
 // Revolvers
 const resolvers = {
     Query: {
-        info: () => 'This is the API for the Hacker News clone!',
+        info: () =>  'This is the API for the Hacker News clone!, Get Rigth Witcha, imma get ya !!' ,
         feed: (root, args, context, info) => {
             return context.prisma.links()
         }
