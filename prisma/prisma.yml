@@ -9,3 +9,8 @@ datamodel: datamodel.prisma
 generate:
   - generator: javascript-client
     output: ../src/generated/prisma-client
+
+# Post deployment Hooks 
+hooks:
+  post-deploy:
+    - prisma-generate
