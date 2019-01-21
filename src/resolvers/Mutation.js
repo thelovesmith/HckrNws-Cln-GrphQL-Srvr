@@ -2,10 +2,10 @@
 //Signup Revolver
 async function signup(parent, args, context, info){
 
-    //encryptig users password 
+    //encrypting users password 
     const password = await bcrypt.hash(args.password, 10)
 
-    //stor user in database using prisma client
+    //store user in database using prisma client
     const user = await context.prisma.createUser({...args, password})
 
     //generating a jwt and signing it with an APp Secret
@@ -34,7 +34,6 @@ async function login(parent, args, context, info){
     }
 
     const token = jwt.sign({userId: user.id}, APP_SECRET)
-    
     
     //
     return {
