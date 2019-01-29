@@ -5,7 +5,7 @@
 
 #More effiecint than REST 
 +With increased mobile usage there was a need for a more efficient method for loading data
-+There are now a variety of front end frameworks and platforms, so there was a need for an API that can fulfill the requirements for all. GraphQL makes this easier. One fetch, specific data.
++There are now a variety of front end frameworks and platforms, so there was a need for an API that can fulfill the requirements for all. GraphQL makes this easier. One fetch, and you get specific data.
 +Continuous deployment and fast development speed
 
 #lil History 
