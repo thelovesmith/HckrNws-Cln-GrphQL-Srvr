@@ -18,6 +18,6 @@ type User {
 
 type Vote {
     id: ID! @unique
-    link: Link! # one to many relation to link
-    user: User! #one to many relation to user
+    link: Link! 
+    user: User! 
 }

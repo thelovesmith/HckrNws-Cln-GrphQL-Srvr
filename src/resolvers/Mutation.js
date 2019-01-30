@@ -84,7 +84,7 @@ async function vote(parent, args, context, info) {
     //if exists returns true then error will be thrown 
     const linkExists = await context.prisma.$exists.vote({
         user: { id: userId },
-        linl: { id: args.linkId }, 
+        link: { id: args.linkId }, 
     })
     if (linkExists) {
         throw new Error(`Already voted for link: ${args.linkId}`)        

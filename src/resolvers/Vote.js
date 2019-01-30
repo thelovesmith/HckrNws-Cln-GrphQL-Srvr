@@ -9,3 +9,4 @@ function user(parent, args, context) {
 module.exports = {
     link,
     user,
+}
