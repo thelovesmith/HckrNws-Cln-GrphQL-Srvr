@@ -17,7 +17,15 @@
 + Insightful analytics in the backend. Since dtat being fetched is sepcific, you cna get analytics on what data is being requested and what data doesn't get anymore love from the clients 
 + Schema and Type-based system makes it easier for front end and back end development to work seperately because they have a definite structure for the data. 
 
- # GraphQL Subscriotions 
+ # GraphQL Subscriptions 
  + Graphql subscriptions send realtime data to clients when a sepcific event occurs.
  + Client sends a subscrition query that specfies which event they want updates on.
+
+# Prisma subscriptions 
++ Prisma xcomes with out-of-the-box support for subscriptions
++ For each model in your prisma datamodel, prisma lets you subscribe to these events using the *$subscribe* method
+  1. created
+  2. updated
+  3. deleted
+
 

@@ -4,6 +4,13 @@ function postedBy(parent, args, context) {
     return context.prisma.link({id: parent.id}).postedBy()
 }
 
+//resolver for vote for link
+function votes(parent, args, context) {
+    //linking vote to link
+    return context.prisma.link({ id: parent.id }).votes()
+}
+
 module.exports = {
     postedBy,
+    votes,
 }
