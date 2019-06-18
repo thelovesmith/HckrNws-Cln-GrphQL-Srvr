@@ -14,7 +14,7 @@
 
 # Better Than REST 
 + No more over- or under-fetching data. You get the exact data you ask for!! Much more efficient 
-+ Insightful analytics in the backend. Since dtat being fetched is sepcific, you cna get analytics on what data is being requested and what data doesn't get anymore love from the clients 
++ Insightful analytics in the backend. Since that being fetched is sepcific, you can get analytics on what data is being requested and what data doesn't get anymore love from the clients 
 + Schema and Type-based system makes it easier for front end and back end development to work seperately because they have a definite structure for the data. 
 
  # GraphQL Subscriptions 

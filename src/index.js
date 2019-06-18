@@ -19,6 +19,7 @@ const resolvers = {
 //Server
 const server = new GraphQLServer({
     typeDefs: './src/schema.graphql',
+    // Type definitions are pretty much your graphql schema
     resolvers,
     //Instead of attaching an object directly, you’re now creating the context as a function which returns the context. The advantage of this approach is that you can attach the HTTP request that carries the incoming GraphQL query (or mutation) to the context as well. This will allow your resolvers to read the Authorization header and validate if the user who submitted the request is eligible to perform the requested operation.
 

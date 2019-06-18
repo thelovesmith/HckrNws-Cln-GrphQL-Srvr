@@ -1,5 +1,10 @@
-#Remember you must implement resolvers for each relation in you GraphQL schema 
+#?Remember you must implement resolvers for each relation in you GraphQL schema 
+# Exclamation marks (!) in the typedef means this value can never be null 
+# Brackets around a field's type value means that type has its own Type Definition 
 
+
+
+#! Here a query type is being defined and it has two fields info, and feed. the Info field has a type of String! and feed has a type of Link. 
 type Query {
   info: String!
   feed: [Link!]!
