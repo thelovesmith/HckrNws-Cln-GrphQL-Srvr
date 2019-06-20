@@ -2,12 +2,20 @@
 # Exclamation marks (!) in the typedef means this value can never be null 
 # Brackets around a field's type value means that type has its own Type Definition 
 
+# TODO: ADD Edit user info Mutation
+# TODO: ADD Username field to user schema 
 
 
 #! Here a query type is being defined and it has two fields info, and feed. the Info field has a type of String! and feed has a type of Link. 
+# FILTERING: 
 type Query {
   info: String!
-  feed: [Link!]!
+  feed(filter: String, skip: Int, first: Int, orderBy: LinkOrderByInput): Feed!
+}
+
+type Feed {
+  links: [Link!]!
+  count: Int!
 }
 
 type Mutation {
@@ -46,4 +54,13 @@ type Vote {
   id: ID!
   link: Link!
   user: User!
+}
+
+enum LinkOrderByInput {
+  description_ASC
+  description_DESC
+  url_ASC
+  url_DESC
+  createdAt_ASC
+  createdAt_DESC
 }
