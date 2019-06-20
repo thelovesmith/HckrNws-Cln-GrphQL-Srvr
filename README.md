@@ -23,9 +23,14 @@
 
 # Prisma subscriptions 
 + Prisma xcomes with out-of-the-box support for subscriptions
-+ For each model in your prisma datamodel, prisma lets you subscribe to these events using the *$subscribe* method
-  1. created
-  2. updated
-  3. deleted
++ For each model in your prisma datamodel, prisma lets you subscribe to these events using the * $subscribe * method
+  1. the model is <!--! created -->
+  2. the model is <!--! updated -->
+  3. the model is <!--! deleted -->
 
+
+# Building GraphQl servers with Prisma 
++ CLIENT <-----> API SERVER{Prisma Client} <-----> PRISMA SERVER <-----> DATABASE 
++ You are builing an API that will impliment a Prisma client that is the key to accessing the database. 
++ The prisma client in your API consumes the Prisma API and let's you easily connect your resolvers to the database
 

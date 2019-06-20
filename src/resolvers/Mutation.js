@@ -6,7 +6,14 @@ const { APP_SECRET, getUserId } = require('../utils')
 //////////////////////////
 //////////////////////////
 //////////////////////////
-//Signup Revolver
+
+//! The signup and login mutations behave very similar.Both return information about the User who’s signing up(or logging in) as well as a token which can be used to authenticate subsequent requests against your GraphQL API.This information is bundled in the AuthPayload type.
+//////////////
+//////////////
+//////////////
+
+
+//! Signup Revolver
 async function signup(parent, args, context, info){
 
     //encrypting user's password 
@@ -28,7 +35,7 @@ async function signup(parent, args, context, info){
 ///////////////////////////
 ///////////////////////////
 ///////////////////////////
-//Login Revolver 
+//! Login Revolver 
 async function login(parent, args, context, info){
 
     //IF the user email isn't found in the database then the login funciton will throw an error 
@@ -74,7 +81,7 @@ function post(parent, args, context, info ) {
 ///////////////////////////
 ///////////////////////////
 ///////////////////////////
-//Resolver Function for Vote 
+//! Resolver Function for Vote 
 async function vote(parent, args, context, info) {
     //validating JWT with getuserid function and returning userID if validated 
     const userId = getUserId(context)
